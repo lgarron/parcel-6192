@@ -5,12 +5,3 @@ export {
   Twisty3DCanvas,
 } from "./dom/viewers/Twisty3DCanvas";
 export { TwistyPlayer } from "./dom/TwistyPlayer";
-export {
-  TwistyPlayerInitialConfig,
-  ExperimentalStickering,
-} from "./dom/TwistyPlayerConfig";
-export {
-  TimelineActionEvent,
-  TimestampLocationType,
-} from "./animation/Timeline";
-export { ExperimentalTwistyAlgViewer } from "./dom/TwistyAlgViewer";
