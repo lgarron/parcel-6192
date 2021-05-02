@@ -60,24 +60,6 @@ export class ExperimentalTwistyAlgViewer extends HTMLElement {
         onTimeRangeChange(_timeRange: TimeRange): void {},
       });
     })();
-    twistyPlayer.timeline.addTimestampListener({
-      onTimelineTimestampChange: (timestamp: MillisecondTimestamp) => {
-        if (timestamp !== this.lastClickTimestamp) {
-          this.lastClickTimestamp = null;
-        }
-        const index =
-          this.twistyPlayer?.cursor?.experimentalIndexFromTimestamp(
-            timestamp,
-          ) ?? null;
-        if (index !== null) {
-          // console.log(index);
-          // console.log(this.#domTree.pathToIndex(index));
-        }
-      },
-      onTimeRangeChange: (_timeRange: TimeRange) => {
-        // TODO
-      },
-    });
   }
 
 }
