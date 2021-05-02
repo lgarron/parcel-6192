@@ -3,42 +3,6 @@ import { experimentalIs, experimentalIsUnit } from "./is";
 
 export type FlexibleAlgSource = string | Iterable<Unit> | Alg;
 
-// TODO: validate
-function toIterable(input?: FlexibleAlgSource): Iterable<Unit> {
-  if (!input) {
-    return [];
-  }
-
-  if (experimentalIs(input, Alg)) {
-    return (input as Alg).units();
-  }
-
-  if (typeof input === "string") {
-    return parseAlg(input).units(); // TODO: something more direct?
-  }
-
-  // const seq = inputUnits as Sequence;
-  // if (seq.type === "sequence" && seq.nestedUnits) {
-  //   throw new Error("unimplemented");
-  //   // return seq.nestedUnits;
-  // }
-
-  const iter = input as Iterable<Unit>;
-  if (typeof iter[Symbol.iterator] === "function") {
-    return iter; // TODO: avoid allocations
-  }
-
-  throw "Invalid unit";
-}
-
-// Preserves the alg if it's already an `Alg`.
-export function experimentalEnsureAlg(alg: FlexibleAlgSource): Alg {
-  if (experimentalIs(alg, Alg)) {
-    return alg as Alg;
-  }
-  return new Alg(alg);
-}
-
 export class Alg extends AlgCommon<Alg> {
   #units: Iterable<Unit>; // TODO: freeze?
   constructor(alg?: FlexibleAlgSource) {
