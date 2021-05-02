@@ -1,28 +1,8 @@
-import {
-  Alg,
-  Commutator,
-  Conjugate,
-  experimentalDirect,
-  ExperimentalIterationDirection,
-  Grouping,
-  LineComment,
-  Move,
-  Newline,
-  Pause,
-  TraversalDownUp,
-  Unit,
-} from "../../alg";
 import type { Parsed } from "../../alg/parse";
 import { puzzles } from "../../puzzles";
 import { TwistyPlayer } from "../../twisty";
 import { KPuzzleWrapper } from "../3D/puzzles/KPuzzleWrapper";
-import type { TimeRange } from "../animation/cursor/AlgCursor";
-import type { MillisecondTimestamp } from "../animation/cursor/CursorTypes";
 import { TreeAlgIndexer } from "../animation/indexer/tree/TreeAlgIndexer";
-import {
-  customElements,
-  HTMLElement,
-} from "./element/node-custom-element-shims";
 
 export class ExperimentalTwistyAlgViewer extends HTMLElement {
   highlighter: MoveHighlighter = new MoveHighlighter();
