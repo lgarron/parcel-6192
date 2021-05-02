@@ -1,8 +1,6 @@
 import { AlgCommon, Comparable } from "./common";
 import { experimentalIs, experimentalIsUnit } from "./is";
 import { direct, IterationDirection, reverse } from "./iteration";
-import { parseAlg } from "./parse";
-import { SimplifyOptions, simplify } from "./traversal";
 
 export type FlexibleAlgSource = string | Iterable<Unit> | Alg;
 
