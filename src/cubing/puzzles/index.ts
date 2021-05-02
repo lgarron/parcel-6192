@@ -1,3 +1,11 @@
-import { cube3x3x3 } from "./implementations/3x3x3";
+import { asyncGetPuzzleGeometry } from "./async/async-pg3d";
 
-export { cube3x3x3 };
+export const cube3x3x3 = {
+  def: async () => {
+    // return await import("./3x3x3.kpuzzle.json");
+    return {};
+  },
+  pg: async () => {
+    return asyncGetPuzzleGeometry("3x3x3");
+  },
+};
