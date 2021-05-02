@@ -1,5 +1,5 @@
-import { puzzles } from "../puzzles";
+import { cube3x3x3 } from "../puzzles";
 
 (async () => {
-  await puzzles["3x3x3"].def()
+  await cube3x3x3.def()
 })();
