@@ -28,14 +28,7 @@ export abstract class AlgCommon<T extends Alg | Unit>
   extends Comparable
   implements Repeatable {
   constructor() {
-    super();
-    if (writeAlgDebugField) {
-      Object.defineProperty(this, "_debugStr", {
-        get: function () {
-          return this.toString();
-        },
-      });
-    }
+    super()
   }
 
   abstract toString(): string;
