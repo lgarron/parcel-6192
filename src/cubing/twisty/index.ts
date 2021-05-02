@@ -14,13 +14,3 @@ export {
   TimestampLocationType,
 } from "./animation/Timeline";
 export { ExperimentalTwistyAlgViewer } from "./dom/TwistyAlgViewer";
-
-// Old
-export { Cube3D } from "./3D/puzzles/Cube3D";
-export { PG3D } from "./3D/puzzles/PG3D";
-export { AlgIndexer } from "./animation/indexer/AlgIndexer";
-export { SimpleAlgIndexer } from "./animation/indexer/SimpleAlgIndexer";
-export { TreeAlgIndexer } from "./animation/indexer/tree/TreeAlgIndexer";
-export { KPuzzleWrapper as KSolvePuzzle } from "./3D/puzzles/KPuzzleWrapper";
-
-export { BackViewLayout } from "./dom/viewers/TwistyViewerWrapper";
