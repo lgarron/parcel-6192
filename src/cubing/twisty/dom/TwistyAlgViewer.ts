@@ -1,8 +1,6 @@
 import type { Parsed } from "../../alg/parse";
 import { puzzles } from "../../puzzles";
 import { TwistyPlayer } from "../../twisty";
-import { KPuzzleWrapper } from "../3D/puzzles/KPuzzleWrapper";
-import { TreeAlgIndexer } from "../animation/indexer/tree/TreeAlgIndexer";
 
 export class ExperimentalTwistyAlgViewer extends HTMLElement {
   highlighter: MoveHighlighter = new MoveHighlighter();
