@@ -7,6 +7,5 @@ import { FaceNameSwizzler } from "./FaceNameSwizzler";
 import {
   NullMapper
 } from "./NotationMapper";
-import { Quat } from "./Quat";
 
-console.log(FaceNameSwizzler, NullMapper, Quat)
+console.log(FaceNameSwizzler, NullMapper)
