@@ -19,12 +19,6 @@ export const cube3x3x3: PuzzleLoader = {
     // return await import("./3x3x3.kpuzzle.json");
     return cube3x3x3KPuzzle;
   },
-  svg: async () => {
-    return (await import("./3x3x3.kpuzzle.svg")).default;
-  },
-  llSVG: async () => {
-    return (await import("./3x3x3-ll.kpuzzle.svg")).default;
-  },
   pg: async () => {
     return asyncGetPuzzleGeometry("3x3x3");
   },
