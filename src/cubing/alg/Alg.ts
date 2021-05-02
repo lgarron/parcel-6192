@@ -3,12 +3,6 @@ import { experimentalIs, experimentalIsUnit } from "./is";
 import { direct, IterationDirection, reverse } from "./iteration";
 import { parseAlg } from "./parse";
 import { SimplifyOptions, simplify } from "./traversal";
-import { LineComment } from "./units/leaves/LineComment";
-import { Move } from "./units/leaves/Move";
-import { Newline } from "./units/leaves/Newline";
-import { Pause } from "./units/leaves/Pause";
-import type { LeafUnit, Unit } from "./units/Unit";
-import { warnOnce } from "./warnOnce";
 
 export type FlexibleAlgSource = string | Iterable<Unit> | Alg;
 
