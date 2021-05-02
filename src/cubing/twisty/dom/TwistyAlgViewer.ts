@@ -16,21 +16,6 @@ export class ExperimentalTwistyAlgViewer extends HTMLElement {
     }
   }
 
-  protected connectedCallback(): void {
-    // nothing to do?
-  }
-
-  private setAlg(alg: Alg): void {
-    this.#domTree = algToDOMTree(alg, {
-      earliestMoveIndex: 0,
-      twistyAlgViewer: this,
-      direction: ExperimentalIterationDirection.Forwards,
-    }).element;
-    this.textContent = "";
-    this.appendChild(this.#domTree);
-  }
-
-
 }
 
 customElements.define(
