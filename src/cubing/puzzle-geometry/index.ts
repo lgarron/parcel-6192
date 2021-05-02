@@ -1,3 +1,5 @@
-export {
-  getPuzzleGeometryByName,
-} from "./PuzzleGeometry";
+import "./PuzzleGeometry";
+
+export function getPuzzleGeometryByName(): number {
+  return 4;
+}
