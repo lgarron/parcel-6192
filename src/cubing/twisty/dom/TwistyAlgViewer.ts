@@ -21,7 +21,7 @@ import type { MillisecondTimestamp } from "../animation/cursor/CursorTypes";
 import { TreeAlgIndexer } from "../animation/indexer/tree/TreeAlgIndexer";
 import {
   customElements,
-  HTMLElementShim,
+  HTMLElement,
 } from "./element/node-custom-element-shims";
 
 const DEFAULT_OFFSET_MS = 250; // TODO: make this a fraction?
@@ -37,7 +37,7 @@ class DataUp {
   element: TwistyAlgWrapperElem | TwistyAlgLeafElem;
 }
 
-class TwistyAlgLeafElem extends HTMLElementShim {
+class TwistyAlgLeafElem extends HTMLElement {
   constructor(
     className: string,
     text: string,
@@ -64,7 +64,7 @@ class TwistyAlgLeafElem extends HTMLElementShim {
 
 customElements.define("twisty-alg-leaf-elem", TwistyAlgLeafElem);
 
-class TwistyAlgWrapperElem extends HTMLElementShim {
+class TwistyAlgWrapperElem extends HTMLElement {
   private queue: (Element | Text)[] = [];
 
   constructor(className: string, public algOrUnit: Alg | Unit) {
@@ -334,7 +334,7 @@ class MoveHighlighter {
   }
 }
 
-export class ExperimentalTwistyAlgViewer extends HTMLElementShim {
+export class ExperimentalTwistyAlgViewer extends HTMLElement {
   highlighter: MoveHighlighter = new MoveHighlighter();
   #domTree: TwistyAlgWrapperElem | TwistyAlgLeafElem;
   twistyPlayer: TwistyPlayer | null = null;
