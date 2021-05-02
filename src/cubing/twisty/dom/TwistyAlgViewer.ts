@@ -96,27 +96,9 @@ export class ExperimentalTwistyAlgViewer extends HTMLElement {
     }
   }
 
-  protected attributeChangedCallback(
-    attributeName: string,
-    _oldValue: string,
-    newValue: string,
+  protected bogus(
   ): void {
-    if (attributeName === "for") {
-      const elem = document.getElementById(newValue);
-      if (!elem) {
-        console.warn("for= elem does not exist");
-        return;
-      }
-      if (!(elem instanceof TwistyPlayer)) {
-        console.warn("for= elem is not a twisty-player");
-        return;
-      }
-      this.setTwistyPlayer(elem);
-    }
-  }
-
-  static get observedAttributes(): string[] {
-    return ["for"];
+    console.log(document.body instanceof TwistyPlayer)
   }
 }
 
