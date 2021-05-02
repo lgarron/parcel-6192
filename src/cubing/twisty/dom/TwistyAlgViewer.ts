@@ -47,18 +47,6 @@ export class ExperimentalTwistyAlgViewer extends HTMLElement {
       const wrapper = new KPuzzleWrapper(
         await puzzles[twistyPlayer!.puzzle].def(),
       );
-      const indexer = new TreeAlgIndexer(wrapper, parsedAlg);
-      twistyPlayer.timeline.addTimestampListener({
-        onTimelineTimestampChange: (timestamp: MillisecondTimestamp): void => {
-          // TODO: improve perf, e.g. only get notified when the move index changes.
-          this.highlighter.set(
-            indexer.getMove(
-              indexer.timestampToIndex(timestamp),
-            ) as Parsed<Move> | null,
-          );
-        },
-        onTimeRangeChange(_timeRange: TimeRange): void {},
-      });
     })();
   }
 
