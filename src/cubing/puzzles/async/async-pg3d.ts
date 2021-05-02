@@ -1,10 +1,6 @@
 import type { KPuzzleDefinition } from "../../kpuzzle";
 import type { PuzzleGeometry } from "../../puzzle-geometry";
 import type { PuzzleLoader } from "../PuzzleLoader";
-import {
-  cubeAppearance,
-  cubeStickerings,
-} from "../stickerings/cube-stickerings";
 
 // TODO: modify this to handle TwistyPlayer options
 export async function asyncGetPuzzleGeometry(
@@ -70,7 +66,5 @@ export function cubePGPuzzleLoader(
   },
 ): PuzzleLoader {
   const puzzleLoader: PuzzleLoader = genericPGPuzzleLoader(id, fullName, info);
-  puzzleLoader.appearance = cubeAppearance.bind(cubeAppearance, puzzleLoader);
-  puzzleLoader.stickerings = cubeStickerings;
   return puzzleLoader;
 }
