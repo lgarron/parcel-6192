@@ -20,7 +20,7 @@ import type { TimeRange } from "../animation/cursor/AlgCursor";
 import type { MillisecondTimestamp } from "../animation/cursor/CursorTypes";
 import { TreeAlgIndexer } from "../animation/indexer/tree/TreeAlgIndexer";
 import {
-  customElementsShim,
+  customElements,
   HTMLElementShim,
 } from "./element/node-custom-element-shims";
 
@@ -62,7 +62,7 @@ class TwistyAlgLeafElem extends HTMLElementShim {
   }
 }
 
-customElementsShim.define("twisty-alg-leaf-elem", TwistyAlgLeafElem);
+customElements.define("twisty-alg-leaf-elem", TwistyAlgLeafElem);
 
 class TwistyAlgWrapperElem extends HTMLElementShim {
   private queue: (Element | Text)[] = [];
@@ -95,7 +95,7 @@ class TwistyAlgWrapperElem extends HTMLElementShim {
   }
 }
 
-customElementsShim.define("twisty-alg-wrapper-elem", TwistyAlgWrapperElem);
+customElements.define("twisty-alg-wrapper-elem", TwistyAlgWrapperElem);
 
 function oppositeDirection(
   direction: ExperimentalIterationDirection,
@@ -450,7 +450,7 @@ export class ExperimentalTwistyAlgViewer extends HTMLElementShim {
   }
 }
 
-customElementsShim.define(
+customElements.define(
   "experimental-twisty-alg-viewer",
   ExperimentalTwistyAlgViewer,
 );
