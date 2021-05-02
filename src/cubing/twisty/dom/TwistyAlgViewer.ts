@@ -96,10 +96,6 @@ export class ExperimentalTwistyAlgViewer extends HTMLElement {
     }
   }
 
-  protected bogus(
-  ): void {
-    console.log(document.body instanceof TwistyPlayer)
-  }
 }
 
 customElements.define(
