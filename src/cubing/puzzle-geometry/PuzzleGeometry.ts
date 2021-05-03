@@ -4,8 +4,6 @@
 /* tslint:disable typedef */ // TODO
 
 import { FaceNameSwizzler } from "./FaceNameSwizzler";
-import {
-  NullMapper
-} from "./NotationMapper";
+import { Move } from "../alg";
 
-console.log(FaceNameSwizzler, NullMapper)
+console.log(FaceNameSwizzler, new Move("R2"))
