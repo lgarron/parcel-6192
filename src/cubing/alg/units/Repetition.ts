@@ -45,49 +45,4 @@ export class Repetition<Q extends Repeatable> {
       throw new Error("Invalid prime boolean.");
     }
   }
-
-  /** @deprecated */
-  experimentalEffectiveAmount(): number {
-    return (this.absAmount ?? 1) * (this.prime ? -1 : 1);
-  }
-
-  suffix(): string {
-    let s: string = "";
-    // TODO
-    if (this.absAmount !== null && this.absAmount !== 1) {
-      s += this.absAmount;
-    }
-    if (this.prime) {
-      s += "'";
-    }
-    return s;
-  }
-
-  isIdentical(other: Repetition<Q>): boolean {
-    return (
-      this.quantum.isIdentical(other.quantum) &&
-      (this.absAmount ?? 1) === (other.absAmount ?? 1) && // TODO
-      this.prime === other.prime
-    );
-  }
-
-  info(): RepetitionInfo {
-    return [this.absAmount, this.prime];
-  }
-
-  inverseInfo(): RepetitionInfo {
-    return [this.absAmount, !this.prime];
-  }
-
-  // TODO: `Conjugate` and `Commutator` decrement `depth` inside the quantum, `Grouping` has to do it outside the quantum.
-  *experimentalExpand(
-    iterDir: IterationDirection,
-    depth: number,
-  ): Generator<LeafUnit> {
-    const absAmount = this.absAmount ?? 1;
-    const newIterDir = toggleDirection(iterDir, this.prime);
-    for (let i = 0; i < absAmount; i++) {
-      yield* this.quantum.experimentalExpand(newIterDir, depth);
-    }
-  }
 }
