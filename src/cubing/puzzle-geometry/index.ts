@@ -23,5 +23,4 @@ class FaceNameSwizzler {
 
 }
 
-
 console.log(FaceNameSwizzler, new Move("R2"))

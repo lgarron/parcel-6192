@@ -1,39 +1,14 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf8" />
-    <meta name="viewport" content="initial-scale=0.8" />
-    <title>alg.cubing.net v2</title>
+    <title>Parcel Issue #6192 Repro</title>
     <script src="./index.ts" defer></script>
   </head>
-
   <body>
-    <app>
-      <puzzle-pane class="loading">
-        <div class="spinner"></div>
-      </puzzle-pane>
-      <control-pane class="loading">
-        <div class="title">alg.cubing.net [v2 beta]</div>
-        <p style="margin-top: 1.5em; color: red">
-          Note: everything here is super-experimental. Puzzles and notation will
-          change.
-        </p>
-        <textarea
-          class="experimental-setup-alg"
-          placeholder="[Click here to add anchor setup alg.]"
-        ></textarea>
-        <textarea class="alg" placeholder="[Click here to add alg.]"></textarea>
-        <select class="puzzle">
-          <option>Puzzle</option>
-        </select>
-        <br />
-        <select class="stickering">
-          <option>Stickering</option>
-        </select>
-        <select class="setup-anchor">
-          <option>Setup Anchor</option>
-        </select>
-      </control-pane>
-    </app>
+    Please open the console. If you see the following, this means we've encountered <a href="https://github.com/parcel-bundler/parcel/issues/6192">Parcel issue #6192</a>:
+    <br>
+    <code>
+      Uncaught Error: Cannot find module '33dcK'
+    </code>
   </body>
 </html>
