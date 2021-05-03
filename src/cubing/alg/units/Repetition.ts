@@ -1,6 +1,5 @@
 import type { Repeatable } from "../common";
 import { IterationDirection, toggleDirection } from "../iteration";
-import { MAX_INT, MAX_INT_DESCRIPTION } from "../limits";
 import type { LeafUnit } from "./Unit";
 
 export type RepetitionInfo =

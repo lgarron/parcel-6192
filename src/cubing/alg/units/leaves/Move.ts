@@ -1,6 +1,5 @@
-import { AlgCommon, Comparable } from "../../common";
+import { AlgCommon } from "../../common";
 import { IterationDirection } from "../../iteration";
-import { MAX_INT, MAX_INT_DESCRIPTION } from "../../limits";
 import { parseMove, parseQuantumMove, transferCharIndex } from "../../parse";
 import { warnOnce } from "../../warnOnce";
 import { Repetition, RepetitionInfo } from "../Repetition";
