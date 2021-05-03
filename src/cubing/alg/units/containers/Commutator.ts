@@ -8,7 +8,7 @@ export class QuantumCommutator extends Comparable {
 }
 
 export class Commutator extends AlgCommon<Commutator> {
-  readonly #repetition: Repetition<QuantumCommutator>;
+  readonly #repetition: Repetition<QuantumCommutator> = null;
 
   constructor(
     aSource: FlexibleAlgSource,
@@ -16,8 +16,13 @@ export class Commutator extends AlgCommon<Commutator> {
     repetitionInfo?: RepetitionInfo,
   ) {
     super();
-    console.log(Repetitionm
-      experimentalEnsureAlg)
+    this.#repetition = new Repetition<QuantumCommutator>(
+      new QuantumCommutator(
+        experimentalEnsureAlg(aSource),
+        experimentalEnsureAlg(bSource),
+      ), // TODO
+      repetitionInfo,
+    );
   }
 
 }
