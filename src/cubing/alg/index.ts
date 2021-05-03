@@ -2,6 +2,14 @@
 export class Move {
 }
 
-export { Alg } from "./Alg";
+import {
+  Commutator,
+} from "./units/containers/Commutator";
+
+console.log(Commutator)
+
+export class Alg {
+}
+
 
 import "./bulky-code"
