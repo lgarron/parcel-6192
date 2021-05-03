@@ -16,13 +16,8 @@ export class Commutator extends AlgCommon<Commutator> {
     repetitionInfo?: RepetitionInfo,
   ) {
     super();
-    this.#repetition = new Repetition<QuantumCommutator>(
-      new QuantumCommutator(
-        experimentalEnsureAlg(aSource),
-        experimentalEnsureAlg(bSource),
-      ), // TODO
-      repetitionInfo,
-    );
+    console.log(Repetitionm
+      experimentalEnsureAlg)
   }
 
 }
