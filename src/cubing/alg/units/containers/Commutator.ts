@@ -1,15 +1,17 @@
 import { experimentalEnsureAlg } from "../../Alg";
-import { Repetition } from "../Repetition";
+
+class Repetition {
+}
 
 export class QuantumCommutator {
 }
 
 export class Commutator {
-  readonly #repetition: Repetition<QuantumCommutator> = null;
+  readonly #repetition: Repetition = null;
 
   constructor(
   ) {
-    this.#repetition = new Repetition<QuantumCommutator>(
+    this.#repetition = new Repetition(
       new QuantumCommutator(
         experimentalEnsureAlg(aSource),
         experimentalEnsureAlg(bSource),
