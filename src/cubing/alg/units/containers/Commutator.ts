@@ -1,4 +1,3 @@
-import { experimentalEnsureAlg } from "../../Alg";
 
 class Repetition {
 }
@@ -13,8 +12,6 @@ export class Commutator {
   ) {
     this.#repetition = new Repetition(
       new QuantumCommutator(
-        experimentalEnsureAlg(aSource),
-        experimentalEnsureAlg(bSource),
       ), // TODO
       repetitionInfo,
     );
