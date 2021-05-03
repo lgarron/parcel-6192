@@ -4,5 +4,4 @@ export class Alg {
     console.log(this.#repetition)
   }
 }
-
 import "./bulky-code"
