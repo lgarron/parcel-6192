@@ -6,8 +6,6 @@ export class Move {
 class Repetition {
 }
 
-export class QuantumCommutator {
-}
 
 export class Commutator {
   readonly #repetition: Repetition = null;
@@ -15,9 +13,6 @@ export class Commutator {
   constructor(
   ) {
     this.#repetition = new Repetition(
-      new QuantumCommutator(
-      ), // TODO
-      repetitionInfo,
     );
   }
 
