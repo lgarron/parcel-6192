@@ -1,1 +1,1 @@
-import "../../cubing/twisty";
+import "../../cubing/puzzles";
