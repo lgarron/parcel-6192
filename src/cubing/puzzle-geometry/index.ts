@@ -1,4 +1,4 @@
-import { Move } from "../alg";
+import { Alg } from "../alg";
 
 class FaceNameSwizzler {
   public prefixFree: boolean = true;
@@ -7,4 +7,4 @@ class FaceNameSwizzler {
   }
 }
 
-console.log(FaceNameSwizzler, new Move("R2"))
+console.log(FaceNameSwizzler, new Alg("R2"))

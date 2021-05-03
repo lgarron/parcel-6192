@@ -1,15 +1,11 @@
 
-export class Move {
-  readonly #repetition: Repetition = null;
+export class Alg {
+  readonly #repetition = null;
 
   constructor(
   ) {
     console.log(this.#repetition)
   }
-}
-
-
-export class Alg {
 }
 
 
