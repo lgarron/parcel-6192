@@ -1,12 +1,3 @@
-import type { Repeatable } from "../common";
-import { IterationDirection, toggleDirection } from "../iteration";
-import type { LeafUnit } from "./Unit";
-
-export type RepetitionInfo =
-  | undefined
-  | number
-  | null
-  | [/* absolute amount */ number | null, /* prime */ boolean];
 
 export class Repetition<Q extends Repeatable> {
   readonly quantum: Q;
