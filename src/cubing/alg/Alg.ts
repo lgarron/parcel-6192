@@ -1,6 +1,8 @@
-import { experimentalIsUnit } from "./is";
+import {
+  Commutator,
+} from "./units";
 
-console.log(experimentalIsUnit)
+console.log(Commutator)
 
 export class Alg {
 }
